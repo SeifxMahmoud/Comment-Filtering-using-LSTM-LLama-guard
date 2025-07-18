@@ -35,15 +35,9 @@ This work is a hands-on attempt to understand the challenges of integrating clas
 git clone https://github.com/yourusername/Comment-Filtering-using-LSTM-LLama-guard.git
 cd Comment-Filtering-using-LSTM-LLama-guard
 
-## Dependencies
-  Python 3.8+
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-  Transformers (transformers)
+pip install -r requirements.txt
 
-  Datasets (datasets)
-
-  TensorFlow / Keras
-
-  accelerate
-
-  scikit-learn
+pip install --upgrade accelerate
