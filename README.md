@@ -1,29 +1,49 @@
-# Comment-Filtering-using-LSTM-LLama-guard
+# 🛡️ Comment Filtering using LSTM and LLaMA Guard
+
+This repository contains an end-to-end implementation of a hybrid comment moderation system. The pipeline combines traditional LSTM-based sequence modeling with transformer-based moderation using Meta's LLaMA Guard. It aims to classify and filter harmful or inappropriate content in text comments by leveraging both supervised training and prompt-based safety filtering.
 
 ---
 
-## 🚀 Features & Highlights
+## 🔍 Overview
 
-- ✅ Streaming large datasets using `datasets.load_dataset(streaming=True)`
-- ✅ Prompt engineering for multi-column concatenation
-- ✅ Integration with Hugging Face `AutoTokenizer` and model-specific tokenization
-- ✅ LSTM model with TensorFlow/Keras
-- ✅ Safety filtering using LLaMA Guard
-- ✅ Padding/truncation configuration for uniform sequence lengths
-- ✅ Label mapping (`label2id`) for classification targets
+The project explores:
+- Using LSTM for supervised comment classification.
+- Applying LLaMA Guard for post-generation filtering or safety validation.
+- Tokenization strategies suited for transformer models.
+- Efficient data loading via Hugging Face's `datasets` library, with support for streaming large datasets.
+
+This work is a hands-on attempt to understand the challenges of integrating classical NLP architectures with modern LLM-based moderation tools.
 
 ---
 
-## 🔧 Setup Instructions
+## 📁 Directory Structure
+├── data/ # Raw or preprocessed datasets
+├── models/ # Checkpoints and saved models
+├── notebooks/ # Jupyter notebooks for experimentation
+├── src/ # Core Python scripts for training and inference
+├── requirements.txt # Dependencies
+└── README.md # Project documentation
+
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone the repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/yourusername/Comment-Filtering-using-LSTM-LLama-guard.git
 cd Comment-Filtering-using-LSTM-LLama-guard
 
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+## Dependencies
+  Python 3.8+
 
-# Install dependencies
-pip install -r requirements.txt
+  Transformers (transformers)
+
+  Datasets (datasets)
+
+  TensorFlow / Keras
+
+  accelerate
+
+  scikit-learn
